@@ -21,8 +21,6 @@ class PostgresConnection:
         columns_str = ', '.join(columns)
         values_str = ', '.join(values)
 
-        # res = self.cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public' AND table_type = 'BASE TABLE';")
-        # print(res)
         query = f"INSERT INTO {table_name} ({columns_str}) VALUES ({values_str})"
         print(f'Inserting: {query}...')
         self.cursor.execute(query)
