@@ -38,10 +38,6 @@ def xml_analyze(xml_file: str):
     tree = ET.parse(xml_file)
     root = tree.getroot()
     return root.iter()
-    # for element in root.iter():
-    #     for attr_name, attr_value in element.attrib.items():
-    #         print(f"Attribute {attr_name}: {attr_value}")
-    #     print("------------")
 
 
 if __name__ == "__main__":
